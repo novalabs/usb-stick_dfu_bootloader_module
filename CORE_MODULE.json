@@ -1,6 +1,6 @@
 {
-  "name": "usb_dfu_bootloader",
-  "description": "USB DFU bootloader",
+  "name": "usb-stick_dfu_bootloader",
+  "description": "USB Stick DFU bootloader",
   "chip": "STM32F303CB",
   "required_packages": [],
   "chibios_components": [
