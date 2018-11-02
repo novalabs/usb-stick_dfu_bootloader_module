@@ -1,13 +1,13 @@
-# TARGET MODULE usb_dfu_bootloader
+# TARGET MODULE usb-stick_dfu_bootloader
 
-SET(STM32_USE_NANO_SPECS 1)
-
-PROJECT( usb_dfu_bootloader )
+PROJECT( usb-stick_dfu_bootloader )
 CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
 
 FIND_PACKAGE( CORE_BUILD CONFIG REQUIRED )
 
 INCLUDE ( NILTarget NO_POLICY_SCOPE )
+
+SET( USE_SPECS "nano.specs")
 
 SET( BOOTLOADER_SIZE 16384 )
 SET( CONFIGURATION_SIZE 2048 )
@@ -21,7 +21,8 @@ SET( PROJECT_SOURCES
 )
 
 nil_target_module(
-  MODULE usb_dfu_bootloader
+  IS_BOOTLOADER
+  MODULE usb-stick_dfu_bootloader
   OS_VERSION CHIBIOS_16
 )
  
